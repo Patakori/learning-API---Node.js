@@ -1,10 +1,5 @@
 import { Category } from '../model/Category';
-
-// Interface do create
-interface ICreateCategoryDTO {
-  name: string;
-  description: string;
-}
+import { ICreateCategoryDTO } from './ICategoriesRepository';
 
 class CategoriesRepository {
   // Acesso privado e não publico, typagem igual interface
