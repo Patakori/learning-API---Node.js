@@ -29,6 +29,8 @@ class ImportCategoryUseCase {
           });
         })
         .on('end', () => {
+          // utilizado para não acumular em tmp vários arquivos de upload
+          fs.promises.unlink(file.path);
           resolve(categories);
         })
         .on('error', (err) => {
